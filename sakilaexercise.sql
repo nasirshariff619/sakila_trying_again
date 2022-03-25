@@ -58,6 +58,12 @@ SELECT last_name from actor group by last_name having COUNT(actor_id)>1
 SELECT count(film_actor.actor_id), actor.first_name, actor.last_name from actor inner join film_actor on actor.actor_id = film_actor.actor_id group by film_actor.actor_id
 ;
 
+#14
+SELECT * FROM inventory i 
+JOIN film f ON f.film_id = i.film_id
+WHERE i.store_id = 1 AND f.title = 'Academy Dinosaur'
+;
+
 
 
 
